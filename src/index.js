@@ -21,6 +21,7 @@ if(process.env.LOCAL){
         passphrase: process.env.PASSPHRASE
     },app);
 } else {
+    console.log('Hey')
     server = http.createServer(app);
 }
 
