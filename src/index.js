@@ -15,6 +15,7 @@ var server;
 console.log(process.env.LOCAL)
 
 if(process.env.LOCAL){
+    console.log('Zup')
     server = https.createServer({
         key: fs.readFileSync('./certs/key.pem'),
         cert: fs.readFileSync('./certs/cert.pem'),
