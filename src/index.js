@@ -12,17 +12,13 @@ const app = express();
 const port = process.env.PORT || 5000;
 var server;
 
-console.log(process.env.LOCAL)
-
 if(process.env.LOCAL==='true'){
-    console.log('Zup')
     server = https.createServer({
         key: fs.readFileSync('./certs/key.pem'),
         cert: fs.readFileSync('./certs/cert.pem'),
         passphrase: process.env.PASSPHRASE
     },app);
 } else {
-    console.log('Hey')
     server = http.createServer(app);
 }
 
