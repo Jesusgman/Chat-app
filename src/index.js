@@ -12,6 +12,8 @@ const app = express();
 const port = process.env.PORT || 5000;
 var server;
 
+console.log(process.env.LOCAL)
+
 if(process.env.LOCAL){
     server = https.createServer({
         key: fs.readFileSync('./certs/key.pem'),
